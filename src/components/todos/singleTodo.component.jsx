@@ -1,7 +1,9 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import {removeTodo} from "../../redux/todo.action";
 import './singleTodo.style.sass'
 
-const SingleTodo = ({todo}) => (
+const SingleTodo = ({todo, removeItem}) => (
     <div className="columns">
     <div className="column is-three-fifths is-offset-one-fifth">
         <div className="card">
@@ -9,11 +11,16 @@ const SingleTodo = ({todo}) => (
                 <div className="content">
                     {todo}
                 </div>
+                <div className='remove' onClick={ () => removeItem(todo)}>
+                    X
+                </div>
 
         </div>
     </div>
     </div>
     </div>
 )
-
-export default SingleTodo
+const  mapDispatchToProps = dispatch => ({
+    removeItem: item => dispatch(removeTodo(item))
+})
+export default connect(null, mapDispatchToProps)(SingleTodo)
