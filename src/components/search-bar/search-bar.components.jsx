@@ -42,7 +42,7 @@ class SearchBarComponents extends Component {
             onChange={this.handleChange}
             value={this.state.userInput}
             className="input"
-            placeholder="Enter Todo "
+            placeholder="Enter a new Todo"
           />
         </form>
       </div>
