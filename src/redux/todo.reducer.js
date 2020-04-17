@@ -2,7 +2,7 @@ import * as Types from './actionTypes'
 import {removeTodo} from "./todo.utils";
 
 const  INITIAL_STATE= {
-    todo: ['Play Game', 'Learn Redux']
+    todo: []
 }
 const todoReducer = (state = INITIAL_STATE, action) =>{
     switch (action.type) {
