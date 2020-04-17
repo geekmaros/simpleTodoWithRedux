@@ -1,5 +1,5 @@
 export const removeTodo = (todos, todosToRemove) => {
-    const existingTodo = todos.find((todo, i) => todo === todosToRemove)
+    const existingTodo = todos.find((todo) => todo === todosToRemove)
     console.log(existingTodo)
 
     if (existingTodo){
