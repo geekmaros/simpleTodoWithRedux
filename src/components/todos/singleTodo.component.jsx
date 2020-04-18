@@ -12,7 +12,7 @@ const SingleTodo = ({todo, removeItem}) => (
                     {todo}
                 </div>
                 <div className='remove' onClick={ () => removeItem(todo)}>
-                    X
+                    <button>&#x2613;</button>
                 </div>
 
         </div>
